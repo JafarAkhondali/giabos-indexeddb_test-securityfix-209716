@@ -1,0 +1,7 @@
+Links:
+
+   general:             http://stackoverflow.com/questions/14113278/storing-image-data-for-offline-web-application-client-side-storage-database
+   indexed db polyfill: http://nparashuram.com/IndexedDBShim/index.html
+
+
+
