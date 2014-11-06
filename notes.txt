@@ -5,7 +5,9 @@ Links:
    indexed db polyfill: 
                         http://nparashuram.com/IndexedDBShim/index.html
                         https://github.com/axemclion/IndexedDBShim
+                           problem with blob: https://github.com/axemclion/IndexedDBShim/issues/59
    db.js:               http://aaronpowell.github.io/db.js/
+   filer:               https://github.com/filerjs/filer
 
    1. support of indexeddb: 
          * IE10+
