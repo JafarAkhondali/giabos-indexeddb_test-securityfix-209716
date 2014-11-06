@@ -2,7 +2,9 @@ Links:
 
    general:             http://stackoverflow.com/questions/14113278/storing-image-data-for-offline-web-application-client-side-storage-database
    indexeddb api:       https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
-   indexed db polyfill: http://nparashuram.com/IndexedDBShim/index.html
+   indexed db polyfill: 
+                        http://nparashuram.com/IndexedDBShim/index.html
+                        https://github.com/axemclion/IndexedDBShim
    db.js:               http://aaronpowell.github.io/db.js/
 
    1. support of indexeddb: 
@@ -16,4 +18,11 @@ Links:
    2. support of indexeddb blob storage:
 
 
+
+
+
+Notes:
+  * URL.createObjectURL does not work on chrome for Android (4.2.2).
+  * blob shim does not work on Android 4.2.2.
+  
 
