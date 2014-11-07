@@ -20,7 +20,9 @@ Links:
    2. support of indexeddb blob storage:
 
 
-
+Protos:
+   * IndexedDB: http://jsbin.com/qogul/latest/edit?js,output
+   * WEBSQL: http://jsfiddle.net/gbos/zwLnbww5/1/
 
 
 Notes:
