@@ -40,6 +40,9 @@ http.createServer(function(request, response) {
       if (/\.html$/.test(filename)) {
          contentType = {"Content-Type": "text/html"};
       }
+      if (/\.appcache$/.test(filename)) {
+         contentType = {"Content-Type": "text/cache-manifest"};
+      }	  
       response.writeHead(200, contentType);
       response.write(file, "binary");
       response.end();
