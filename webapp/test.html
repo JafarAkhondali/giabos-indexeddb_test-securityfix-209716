@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+    <style>
+        .slider img {
+            width: 100%;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+		<a class="icon icon-left-nav pull-left" data-transition="slide-out" href="index.html"></a>
+		<a class="icon icon-plus pull-right" href="#"></a>
+      <h1 class="title">Test</h1>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+        <div class="slider" id="mySlider">
+            <div class="slide-group">
+                <div class="slide">
+                    <img src="img/t1.jpg">
+                        <span class="slide-text"> <span class="icon icon-left-nav"></span>Slide me</span>
+                    </img> 
+                </div>
+                <div class="slide">
+                    <img src="img/t2.jpg">
+                </div>
+                <div class="slide">
+                    <img src="img/t3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </body>
+</html>
