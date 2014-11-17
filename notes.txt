@@ -31,4 +31,7 @@ Notes:
   * URL.createObjectURL does not work on chrome for Android (4.2.2).
   * blob shim does not work on Android 4.2.2.
   
+icons:
+   http://www.flaticon.com/
+
 
