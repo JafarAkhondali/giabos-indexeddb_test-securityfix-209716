@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+
+	<style>
+		.red {
+			fill: red;
+			stroke: red;
+		}
+	</style>
+
+</head>
+<body>
+
+
+<svg width="190" height="280" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#ededed" id="canvas_background" height="282" width="192" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="238.5" x2="94.5" y1="43.500001" x1="94.5" stroke-width="8.5" />
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="170" x2="148.500005" y1="169.5" x1="44.5" stroke-width="8.5" />
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="237" x2="149" y1="236.5" x1="45.499999" stroke-width="8.5" />
+  <rect ez-on="click:r2click" ez-class="red:r2"  id="svg_4" height="51" width="23" y="143.5" x="148.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" />
+  <rect ez-on="click:r3click" ez-class="red:r3" id="svg_6" height="51" width="23" y="212.5" x="148.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" />
+  <rect ez-on="click:l3click" ez-class="red:l3"  id="svg_7" height="51" width="23" y="210.5" x="21.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" />
+  <rect ez-on="click:l2click" ez-class="red:l2"  stroke="#000" id="svg_8" height="51" width="23" y="144.5" x="21.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" />
+  <line stroke="#000" stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_9" y2="102" x2="147.500005" y1="101.5" x1="43.5" stroke-width="8.5" />
+  <rect ez-on="click:r1click" ez-class="red:r1"  id="svg_10" height="51" width="23" y="76.5" x="148.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" />
+  <rect stroke="#000" ez-on="click:l1click" ez-class="red:l1"  id="svg_11" height="51" width="23" y="76.5" x="21.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" />
+ </g>
+</svg>
+
+
+<script src="js/ez-bind.min.js"></script>
+<script>
+	var vm = new EZ(document.documentElement);
+	vm.r1click = function () { vm.r1 = !vm.r1; };
+	vm.r2click = function () { vm.r2 = !vm.r2; };
+	vm.r3click = function () { vm.r3 = !vm.r3; };
+	vm.l1click = function () { vm.l1 = !vm.l1; };
+	vm.l2click = function () { vm.l2 = !vm.l2; };
+	vm.l3click = function () { vm.l3 = !vm.l3; };
+	
+</script>
+</body>
+</html>
