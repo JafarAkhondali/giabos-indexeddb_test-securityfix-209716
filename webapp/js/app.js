@@ -9,8 +9,8 @@
 			vm.list = ["AAA", "BBB", "CCC"];
 		});
 	}
-    function indexPage () {
-        var vm = new EZ(document.documentElement);
+   function indexPage () {
+      var vm = new EZ(document.documentElement);
 		vm._do(function () {
             vm.settings={};
 	        vm.settings.name = localStorage.getItem('settings.name');	
@@ -22,7 +22,27 @@
         vm._listen('settings.email', function () {
             localStorage.setItem('settings.email', vm.settings.email);
         });
-    }
+   }
+
+   function testPage () {
+      var vm = new EZ(document.documentElement);
+      vm._listen('currentCursor', function (nv) {
+         vm.cursorsList = Array.apply(null, new Array(vm.picturesList.length)).map(Boolean.prototype.valueOf,false);
+         vm.cursorsList[nv] = true;
+      });
+		vm._do(function () {
+         vm.picturesList = [
+            {url: 'img/t1.jpg'},
+            {url: 'img/t2.jpg'},
+            {url: 'img/t3.jpg'}
+         ];
+         vm.currentCursor = 0;
+      });
+      vm.slide = function (evt) {
+         console.log(evt.detail.slideNumber);
+         vm.currentCursor = evt.detail.slideNumber;
+      };
+   }
 
     indexPage();
 
@@ -31,6 +51,9 @@
 		console.log("vm setup ", evt.detail.state.url);
 		if (/\/other.html$/.test(evt.detail.state.url)) {
 			otherPage();
+		}
+		if (/\/test.html$/.test(evt.detail.state.url)) {
+			testPage();
 		}
 		if (/\/index.html$/.test(evt.detail.state.url)) {
 			indexPage();

@@ -3,12 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Ratchet template page</title>
-    <style>
-        .slider img {
-            width: 100%;
-        }
-
-    </style>
   </head>
   <body>
 
@@ -21,21 +15,18 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-        <div class="slider" id="mySlider">
+       <h2>Photos</h2>
+       <div class="cursor">
+            <span ez-repeat="cursorsList" ez-class="red:.">&bullet;</span>
+       </div>
+       <a class="icon icon-plus add-picture-btn" ez-on="click:addPicture" href="#"></a>
+       <div class="slider" id="mySlider" ez-on="slide:slide">
             <div class="slide-group">
-                <div class="slide">
-                    <img src="img/t1.jpg">
-                        <!--span class="slide-text"> <span class="icon icon-left-nav"></span>Slide me</span-->
-                    </img> 
-                </div>
-                <div class="slide">
-                    <img src="img/t2.jpg">
-                </div>
-                <div class="slide">
-                    <img src="img/t3.jpg">
+                <div class="slide" ez-repeat="picturesList">
+                    <img ez-attr="src:url">
                 </div>
             </div>
-        </div>
+       </div>
     </div>
 
   </body>

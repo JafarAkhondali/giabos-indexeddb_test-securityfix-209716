@@ -1,10 +1,9 @@
 CACHE MANIFEST
-# Cache manifest – version & date
+# Cache manifest ï¿½ version & date
 # version 2.0
-# 02.01.2013
+# [2014-11-19T16:35:09.764Z]
 
-
-# Cache – resources to cache with html page
+# Cache resources to cache with html page
 CACHE:
 Cache-Control: no-cache, private
 index.html

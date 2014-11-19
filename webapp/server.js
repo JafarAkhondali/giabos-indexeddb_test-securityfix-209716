@@ -4,6 +4,16 @@ var http = require("http"),
     fs = require("fs")
     port = process.argv[2] || 8888;
  
+// add timestamp in appcache to force reload of app in web browser.
+fs.readFile('offline.appcache', 'utf8', function (err,data) {
+   if (err) { return console.log(err);}
+   var timestamp = new Date().toISOString();
+   var result = data.replace(/\[[^\]]+\]/m, '[' + timestamp + ']');
+   fs.writeFile('offline.appcache', result, 'utf8', function (err) {
+      if (err) return console.log(err);
+   });
+});
+ 
 http.createServer(function(request, response) {
 
       console.log(request.url);

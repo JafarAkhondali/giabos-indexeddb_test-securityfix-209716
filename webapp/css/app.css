@@ -23,3 +23,18 @@ h1.title::first-letter {
 .slider .slide {
     background: white;
 }
+
+.cursor {
+   font-size: 2em;
+   float:right;
+   margin: 10px;
+}
+
+.cursor .red {
+   color: orange;
+}
+
+.add-picture-btn {
+   margin: 5px;
+}
+
