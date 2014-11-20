@@ -38,3 +38,14 @@ h1.title::first-letter {
    margin: 5px;
 }
 
+.no-padding {
+   padding: 0;
+}
+
+
+.title {
+   border-top: 2px solid #808080;
+   border-bottom: 3px solid #808080;
+   color: #808080;
+}
+

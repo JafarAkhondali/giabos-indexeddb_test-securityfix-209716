@@ -16,7 +16,7 @@ fs.readFile('offline.appcache', 'utf8', function (err,data) {
  
 http.createServer(function(request, response) {
 
-      console.log(request.url);
+  console.log(request.url);
  
   var uri = url.parse(request.url).pathname
     , filename = path.join(process.cwd(), uri);

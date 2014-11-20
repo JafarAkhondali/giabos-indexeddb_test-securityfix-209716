@@ -24,7 +24,7 @@
         });
    }
 
-   function testPage () {
+   function newReportPage () {
       var vm = new EZ(document.documentElement);
       vm._listen('currentCursor', function (nv) {
          vm.cursorsList = Array.apply(null, new Array(vm.picturesList.length)).map(Boolean.prototype.valueOf,false);
@@ -52,8 +52,8 @@
 		if (/\/other.html$/.test(evt.detail.state.url)) {
 			otherPage();
 		}
-		if (/\/test.html$/.test(evt.detail.state.url)) {
-			testPage();
+		if (/\/newreport.html$/.test(evt.detail.state.url)) {
+			newReportPage();
 		}
 		if (/\/index.html$/.test(evt.detail.state.url)) {
 			indexPage();

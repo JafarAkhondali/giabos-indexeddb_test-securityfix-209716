@@ -15,7 +15,19 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-       <h2>Photos</h2>
+		<ul class="table-view">
+			<li class="table-view-divider">Details</li>
+			<li class="table-view-divider no-padding">
+				<form class="input-group">
+					<input type="text" placeholder="Asset ID" ez-value="report.details.assetID">
+					<input type="text" placeholder="Reg No" ez-value="report.details.regNo">
+					<input type="text" placeholder="Reference No" ez-value="report.details.refNo">
+					<input type="datetime" placeholder="Inpection Date" ez-value="report.details.inspectionDate">
+					<input type="text" placeholder="Location" ez-value="report.details.location">
+				</form>
+			</li>
+		 <li class="table-view-divider">Pictures</li>
+		</ul>
        <div class="cursor">
             <span ez-repeat="cursorsList" ez-class="red:.">&bullet;</span>
        </div>
