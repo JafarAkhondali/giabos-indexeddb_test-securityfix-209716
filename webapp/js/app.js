@@ -1,17 +1,16 @@
 (function () {
-
 	function otherPage () {
 		var vm = new EZ(document.documentElement);
 		vm.back = function () {
 			window.history.back();
 		};
-		vm._do(function () {
+		vm._apply(function () {
 			vm.list = ["AAA", "BBB", "CCC"];
 		});
 	}
    function indexPage () {
       var vm = new EZ(document.documentElement);
-		vm._do(function () {
+		vm._apply(function () {
             vm.settings={};
 	        vm.settings.name = localStorage.getItem('settings.name');	
 	        vm.settings.email = localStorage.getItem('settings.email');	
@@ -30,7 +29,7 @@
          vm.cursorsList = Array.apply(null, new Array(vm.picturesList.length)).map(Boolean.prototype.valueOf,false);
          vm.cursorsList[nv] = true;
       });
-		vm._do(function () {
+		vm._apply(function () {
          vm.picturesList = [
             {url: 'img/t1.jpg'},
             {url: 'img/t2.jpg'},
