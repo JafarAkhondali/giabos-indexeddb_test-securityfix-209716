@@ -8,6 +8,7 @@ Links:
                            problem with blob: https://github.com/axemclion/IndexedDBShim/issues/59
    db.js:               http://aaronpowell.github.io/db.js/
    filer:               https://github.com/filerjs/filer
+   downscale image      http://stackoverflow.com/questions/18922880/html5-canvas-resize-downscale-image-high-quality
 
    1. support of indexeddb: 
          * IE10+
