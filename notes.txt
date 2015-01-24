@@ -39,3 +39,13 @@ icons:
    http://www.flaticon.com/
 
 
+
+   
+Deploy on pancake.io (http://iinspect.pancakeapps.com/):
+
+    git remote add pk git@build.pancake.io:shanghai-boulevard-2117.git
+    git subtree push --prefix webapp pk master
+    
+    
+    
+   
