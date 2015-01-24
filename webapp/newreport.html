@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ratchet template page</title>
-  </head>
-  <body>
+   <head>
+      <meta charset="utf-8">
+      <title>!inspect</title>
+   </head>
+   <body>
 
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav">
-		<a class="icon icon-left-nav pull-left" data-transition="slide-out" href="index.html"></a>
-		<a class="icon icon-plus pull-right" href="#"></a>
-      <h1 class="title">Test</h1>
-    </header>
+      <!-- Make sure all your bars are the first things in your <body> -->
+      <header class="bar bar-nav">
+         <a class="icon icon-left-nav pull-left" data-transition="slide-out" href="index.html"></a>
+         <h1 class="title">Report</h1>
+      </header>
 
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
-		<ul class="table-view">
-			<li class="table-view-divider">Details</li>
-			<li class="table-view-divider no-padding">
-				<form class="input-group">
-					<input type="text" placeholder="Asset ID" ez-value="report.details.assetID">
-					<input type="text" placeholder="Reg No" ez-value="report.details.regNo">
-					<input type="text" placeholder="Reference No" ez-value="report.details.refNo">
-					<input type="datetime" placeholder="Inpection Date" ez-value="report.details.inspectionDate">
-					<input type="text" placeholder="Location" ez-value="report.details.location">
-				</form>
-			</li>
-		 <li class="table-view-divider">Pictures</li>
-		</ul>
-       <div class="cursor">
-            <span ez-repeat="cursorsList" ez-class="red:.">&bullet;</span>
-       </div>
-       <a class="icon icon-plus add-picture-btn" ez-on="click:addPicture" href="#"></a>
-       <div class="slider" id="mySlider" ez-on="slide:slide">
-            <div class="slide-group">
-                <div class="slide" ez-repeat="picturesList">
-                    <img ez-attr="src:url">
-                </div>
+      <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+      <div class="content" id="new-report-page">
+         <div class="content-padded">
+            <div class="segmented-control">
+               <a class="control-item active" href="#details"> Details </a>
+               <a class="control-item" href="#photos"> Photos </a>
             </div>
-       </div>
-    </div>
+            <div >
+               <span id="details" class="control-content active">
 
-  </body>
+                  <ul class="table-view">
+                     <li class="table-view-divider no-padding">
+                        <form class="input-group">
+                           <div class="input-row"><label>Account</label><input type="text" placeholder="name" ez-value="currentReport.details.accountName"></div>
+                           <div class="input-row"><label>Asset id</label><input type="text" placeholder="Asset ID" ez-value="currentReport.details.assetID"></div>
+                           <div class="input-row"><label>Reg n°</label><input type="text" placeholder="Reg No" ez-value="currentReport.details.regNo"></div>
+                           <div class="input-row"><label>Ref n°</label><input type="text" placeholder="Reference No" ez-value="currentReport.details.refNo"></div>
+                           <div class="input-row"><label>Inpection on</label><input type="date" placeholder="Inpection Date" ez-value="currentReport.details.inspectionDate"></div>
+                           <div class="input-row"><label>Location</label><input type="text" placeholder="GPS coordinates" ez-value="currentReport.details.location"></div>
+                           <textarea placeholder="Note" ez-value="currentReport.details.comment" rows="4" ></textarea>
+                        </form>
+                     </li>
+                  </ul>
+                  <button class="btn btn-positive btn-block" ez-on="click:uploadReport"> <span class="icon icon-share"></span> Upload</button>
+
+               </span>
+               <span id="photos" class="control-content">
+
+                  <div class="hide">
+                     <input id="camera-capture" type="file" capture="camera" accept="image/*"  ez-on="change: newPictureCaptured">
+                  </div>
+
+                  <div class="cursor"> <span ez-repeat="cursorsList" ez-class="red:.">&bullet;</span> </div>
+                  <a class="icon icon-plus picture-btn green" ez-on="click:capturePicture"></a>
+                  <a class="icon icon-close picture-btn red" ez-on="click:removePicture"></a>
+                  <div class="slider" id="mySlider" ez-on="slide:slide">
+                     <div class="slide-group">
+                        <div class="slide" ez-repeat="currentReport.pictures">
+                           <img ez-attr="src:url">
+                        </div>
+                     </div>
+                  </div>
+
+               </span>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>

@@ -1,73 +1,84 @@
 <!DOCTYPE html>
 <html manifest="offline.appcache">
-  <head>
-    <meta charset="utf-8">
-    <title>!inspect.eu</title>
+<!--html-->
+   <head>
+      <meta charset="utf-8">
+      <title>!inspect.eu</title>
 
-    <!-- Sets initial viewport load and disables zooming  -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- Sets initial viewport load and disables zooming  -->
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
-    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+      <meta name="apple-mobile-web-app-capable" content="yes"/>
+      <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
 
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="css/ratchet.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+      <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-  </head>
-  <body>
+      <!-- Include the compiled Ratchet CSS -->
+      <link href="css/ratchet.css" rel="stylesheet"/>
+      <link href="css/app.css" rel="stylesheet"/>
 
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav">
-	   <a class="icon icon-gear pull-right" href="#settings"></a>
-      <h1 class="title">!inspect</h1>
-    </header>
+   </head>
+   <body>
 
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
-      <p class="content-padded">Thanks for downloading Ratchet. This is an example HTML page that's linked up to compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help before you start filling this with your own content? Check out some Ratchet resources:</p>
-      <div class="card">
-        <ul class="table-view">
-          <li class="table-view-cell">
-            <a class="push-right" data-transition="slide-in" href="newreport.html">
-              <strong>Create new report</strong>
-            </a>
-          </li>
-          <li class="table-view-cell">
-            <a class="push-right" data-transition="slide-in"  href="reports.html">
-              <strong>View existing reports</strong>
-            </a>
-          </li>
-      
-        </ul>
+      <!-- Make sure all your bars are the first things in your <body> -->
+      <header class="bar bar-nav">
+         <a class="icon icon-gear pull-right" href="#settings"></a>
+         <h1 class="title">!inspect</h1>
+      </header>
+
+      <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+      <div class="content">
+         <p class="content-padded">
+            The <strong>!inspect</strong> app is transforming your Smartphone or Tablet in to a powerful inspection tool. The App allows you to take pictures, write comments
+            and create alerts for the back office. Together with the search and share function, <strong>!inspect</strong> is the tool that keeps you on the move.
+         </p>
+         <div class="card">
+            <ul class="table-view">
+               <li class="table-view-cell">
+                  <a class="push-right" data-transition="slide-in" ez-on="click:createNewReport">
+                     <strong>Create new report</strong>
+                  </a>
+               </li>
+               <li class="table-view-cell">
+                  <a class="push-right" data-transition="slide-in"  href="reports.html">
+                    <strong>View existing reports</strong>
+                 </a>
+              </li>
+              <li class="table-view-cell">
+                 <a class="push-right" data-transition="slide-in"  href="test.html">
+                    <strong>test</strong>
+                 </a>
+              </li>
+            </ul>
+         </div>
       </div>
-    </div>
 
-	
-	<div id="settings" class="modal">
-	  <header class="bar bar-nav">
-		<a class="icon icon-close pull-right" data-transition="slide-down" href="#settings"></a>
-		<h1 class="title">Settings</h1>
-	  </header>
+      <!-- Settings dialog -->
+      <div id="settings" class="modal">
+         <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" data-transition="slide-down" href="#settings"></a>
+            <h1 class="title">Settings</h1>
+         </header>
 
-	  <div class="content">
-		<p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
-		<form class="input-group">
-		  <input type="text" placeholder="Full name" ez-value="settings.name">
-		  <input type="email" placeholder="Email" ez-value="settings.email">
-		  <input type="text" placeholder="Username" ez-value="settings.username">
-		</form>
-	  </div>
-	</div>	
-	
-	
-	<script src="js/ez-bind.min.js"></script>
-    <script src="js/ratchet.js"></script>
-	<script src="js/app.js"></script>
+         <div class="content">
+            <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+            <form class="input-group">
+               <input type="text" placeholder="Full name" ez-value="settings.name">
+               <input type="email" placeholder="Email" ez-value="settings.email">
+               <input type="text" placeholder="Username" ez-value="settings.username">
+            </form>
+         </div>
+      </div>
 
-  </body>
+      <script src="js/moment.min.js"></script>
+      <script src="js/ez-bind.min.js"></script>
+      <script src="js/ratchet.min.js"></script>
+      <!--script src="https://rawgit.com/axemclion/IndexedDBShim/master/dist/IndexedDBShim.js"></script--> <!-- shim for indexedDB for browser not supporting it ! -->
+      <script src="js/indexeddbshim.js"></script>
+      <script src="js/reportsStore.js"></script>
+      <script src="js/app.js"></script>
+
+   </body>
 </html>

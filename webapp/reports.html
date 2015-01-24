@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ratchet template page</title>
-  </head>
-  <body>
+   <head>
+      <meta charset="utf-8">
+      <title>Ratchet template page</title>
+   </head>
+   <body>
 
-    <!-- Make sure all your bars are the first things in your <body> -->
-    <header class="bar bar-nav">
-		<a class="icon icon-left-nav pull-left" data-transition="slide-out" ez-on="touchstart:backAAA" href="index.html"></a>
-		<a class="icon icon-plus pull-right" href="#"></a>
-      <h1 class="title">Reports</h1>
-    </header>
+      <!-- Make sure all your bars are the first things in your <body> -->
+      <header class="bar bar-nav">
+         <a class="icon icon-left-nav pull-left" data-transition="slide-out" ez-on="touchstart:backAAA" href="index.html"></a>
+         <a class="icon icon-plus pull-right" href="#" ez-on="click:createNewReport"></a>
+         <h1 class="title">Reports</h1>
+      </header>
 
-    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-    <div class="content">
-     <ul class="table-view">
-		  <li class="table-view-cell media">
-			<a class="navigate-right">
-			  <img class="media-object pull-left to-upload" src="http://icons.iconarchive.com/icons/iconsmind/outline/32/Upload-toCloud-icon.png">
-			  <div class="media-body">
-				10/12/2014 14:56
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit amet.</p>
-			  </div>
-			</a>
-		  </li>
-		</ul>
-
-  </body>
+      <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+      <div class="content" id="reports-page">
+         <ul class="table-view">
+            <li class="table-view-cell media" ez-repeat="reports">
+               <a class="navigate-right" href="#" data-transition="slide-in" ez-on="click: ^showReport">
+                  <span class="media-object pull-left icon icon-check report-uploaded"></span>
+                  <span class="badge" ez-text="picturesCount"></span>
+                  <div class="media-body">
+                     <span ez-text="createdOnAsStr"></span>
+                  </div>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </body>
 </html>

@@ -10,6 +10,9 @@ Links:
    filer:               https://github.com/filerjs/filer
    downscale image      http://stackoverflow.com/questions/18922880/html5-canvas-resize-downscale-image-high-quality
 
+
+    to delete appcache on chrome: chrome://appcache-internals/
+
    1. support of indexeddb: 
          * IE10+
          * Chrome

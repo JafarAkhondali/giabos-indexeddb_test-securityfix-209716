@@ -1,7 +1,7 @@
 CACHE MANIFEST
 # Cache manifest � version & date
 # version 2.0
-# [2014-11-20T13:01:46.780Z]
+# [2015-01-23T20:00:04.118Z]
 
 
 # Cache resources to cache with html page
@@ -10,13 +10,14 @@ Cache-Control: no-cache, private
 index.html
 reports.html
 newreport.html
-js/ratchet.js
 css/ratchet.css
-js/ez-bind.min.js
-js/app.js
 css/app.css
 fonts/ratchicons.woff
 fonts/ratchicons.ttf
-img/t1.jpg
-img/t2.jpg
-img/t3.jpg
+js/ratchet.min.js
+js/moment.min.js
+js/ez-bind.min.js
+js/app.js
+js/indexeddbshim.js
+js/reportsStore.js
+
