@@ -16,6 +16,11 @@ fs.readFile('offline.appcache', 'utf8', function (err,data) {
  
 http.createServer(function(request, response) {
 
+    if (path.normalize(decodeURI(request.url)) !== decodeURI(request.url)) {
+        response.statusCode = 403;
+        response.end();
+        return;
+    }
   console.log(request.url);
  
   var uri = url.parse(request.url).pathname
